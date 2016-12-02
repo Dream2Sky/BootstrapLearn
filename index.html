@@ -4,22 +4,691 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="Viewport" content="width=device-width,inital-scale=1">
     <title></title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <style type="text/css">
-    html body {
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/iconfont1.css">
+    <style>
+    html,
+    body {
+        width: 100%;
         height: 100%;
     }
-    .navbar-toggle{
+    /*中间部分*/
+    
+    .content_nav {
+        border: 1px solid red;
+        padding: 0px;
+    }
+    /*中间视频部分*/
+    
+    .cont_top {
+        display: block;
+        border: 1px solid green;
+        height: 60%;
+        background-color: yellow;
+        padding: 0px;
+    }
+    
+    video {
+        width: 100%;
+        height: 100%;
+    }
+    /*    .navbar-header button {
+        background-color: bisque;
+    }*/
+    
+    .navbar-header span {
+        color: #fff;
+    }
+    /*中间导航部分*/
+    
+    .cont_down {
+        display: block;
+        border: 1px solid gray;
+        height: 50%;
+        padding: 0px;
+    }
+    
+    .cont_nav {
+        padding: 0px;
+    }
+    
+    .cont_nav ul li {
+        width: 132px!important;
+    }
+    
+    .cont_nav ul li a {
+        text-align: center;
+        color: #555;
+        font-size: 1.6rem;
+    }
+    
+    .nav-tabs > li.active > a,
+    .nav-tabs > li.active > a:hover,
+    .nav-tabs > li.active > a:focus {
+        color: #408116;
+        cursor: default;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+    }
+    /*立即开户按钮*/
+    
+    .account {
+        width: 110px;
+        height: 35px;
+        margin-right: 10px;
+        margin-top: 4px;
+        background-color: #3a96d5;
+        font-family: 微软雅黑;
+        color: #fff;
+        border-radius: 4px;
+        border: 1px solid #3a96d5;
+    }
+    
+    .nav_group {
+        border: 1px solid black;
+    }
+    /*大号按钮组*/
+    
+    .bg-group {
+        border-bottom: 1px solid #d2d2d2;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .bg-group button {
+        border: 1px solid #408e16;
+        color: #408e16;
+        background-color: #fff;
+        font-family: 微软雅黑;
+        min-width: 20%;
+        height: 35px;
+        margin-top: 12px;
+    }
+    
+    .bg-group button:hover {
+        background-color: #408e16;
+        color: #fff;
+        border: 1px solid #408e16;
+    }
+    /*内容*/
+    
+    .cont_neirong {
+        border: 1px solid red;
+        overflow: hidden;
+    }
+    
+    .cont_left {
+        border: 1px solid black;
+    }
+    
+    .cont_right {
+        border: 1px solid black
+    }
+    /*行情*/
+    
+    .info {
+        border: 1px solid red;
+        min-height: 33px;
+        overflow: hidden;
+    }
+    
+    .info span {
+        border-left: 3px solid #408e16;
+        padding: 0px 5px;
+        position: relative;
+        left: 2px;
+        top: 7px;
+        font-size: 1.6rem;
+        font-family: 微软雅黑;
+    }
+    
+    .list-a ul {
+        padding: 0px;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    
+    .list-a ul li {
+        border: 1px solid black;
+        list-style: none;
+        float: left;
+        width: 25%!important;
+        text-align: left;
+    }
+    
+    .right-r {
+        border: 1px solid black;
+        padding: 0px;
+    }
+    
+    .right-l {
+        border: 1px solid green;
+    }
+    
+    .fourth {
+        border: 1px solid black;
+        width: 12%;
+        float: right;
+        text-align: center;
+        font-family: 微软雅黑;
+        color: #a5a8ac;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    
+    .fourtha {
+        border: 1px solid black;
+        width: 12%;
+        float: right;
+        text-align: center;
+        font-family: 微软雅黑;
+        color: #a5a8ac;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    
+    .spe {
+        width: 6px;
+        height: 6px;
+        background-color: #2bb488;
+        position: absolute;
+        top: 16px;
+    }
+    
+    .empty {
+        background-color: #c9555b;
+    }
+    
+    .data {
+        color: #939599;
+        line-height: 30px;
+        vertical-align: top;
+        border: 1px solid red;
+        height: 65px;
+        float: left;
+        padding: 0px;
+    }
+    
+    .update {
+        border: 1px solid black;
+        margin-top: 86px;
+        color: #939599;
+        font-size: 1rem;
+        padding: 0px 20px;
+    }
+    
+    .circle {
+        /*        width: 80px;
+        float: right;
+        text-align: center;
+        position: absolute;
+        top: -27px;
+        right: 0px;
+        position: absolute;*/
+        width: 65px;
+        height: 65px;
+        padding: 0px;
+        display: block;
+        /* position: static; */
+        margin-right: 0px;
+        text-align: center;
+    }
+    
+    .circle-jin {
+        position: relative;
+        top: 21px;
+        font-size: 12px;
+        font-weight: 200;
+    }
+    
+    .circle canvas {
+        position: relative;
+        top: -20px;
+    }
+    
+    .info span {
+        border-left: 3px solid #408e16;
+        padding: 0px 5px;
+        font-size: 1.6rem;
+        font-family: 微软雅黑;
+    }
+    
+    .List {
+        border: 1px solid green;
+        width: 100%;
+    }
+    
+    .course {
+        width: 100%;
+        border: 1px solid yellow;
+        overflow: hidden;
+    }
+    
+    .intortext {
+        float: left;
+        position: relative;
+        left: 195px;
+        top: -84px;
+    }
+    
+    .intortext span {
+        padding-left: 5px;
+        font-family: 微软雅黑;
+        font-size: 18px;
+        color: #626366;
+        padding-left: 5px;
+        border-left: 3px solid #3b96d5;
+    }
+    
+    .pagination {
+        padding-left: 20px!important;
+    }
+    
+    .pagination {
+        display: inline-block;
+        /*padding-left: 0;*/
+        margin: 20px 0;
+        border-radius: 4px;
+    }
+    
+    .left-down ul li {
+        /* border: 1px solid black; */
+        width: 110px;
+    }
+    
+    .pagination > li {
+        display: block;
+        max-width: 46px;
+        float: left;
+    }
+    /*订阅*/
+    
+    .modal-title {
+        /*margin: 15px;*/
+        line-height: 1.42857143;
+        text-align: center;
+    }
+    /*登录模态框*/
+    
+    .content {
+        height: 400px;
+        margin-top: 185px;
+        width: 529px;
+    }
+    
+    .header {
+        min-height: 50px!important;
+    }
+    
+    .zb-title {
+        font-size: 24px;
+        line-height: 60px;
+        color: #444;
+        text-align: center;
+    }
+    
+    .zb-title span {
+        display: inline-block;
+        margin: 30px 19px 0;
+        height: 1px;
+        vertical-align: top;
+        background: #aec7de;
+        width: 23%;
+    }
+    
+    .zb-title span i {
+        display: block;
+        height: 1px;
+        background: #5d8fbe;
+        width: 60%;
+    }
+    
+    .zb-login {
+        float: right;
+    }
+    /*登录表单*/
+    
+    .formcont {
+        margin-top: -10px;
+    }
+    
+    .formcont .in_line {
+        margin-top: 10px;
+        height: 43px;
+        position: relative;
+        text-align: center;
+    }
+    
+    .in_line .inuser {
+        height: 43px;
+        padding-left: 35px;
+        width: 403px;
+        font-size: 14px;
+        line-height: 43px;
+        font-family: 'Microsoft YaHei';
+        background: 0 0;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        position: relative;
+        /*left: -54px;*/
+    }
+    /*密码*/
+    
+    .in_line .inpwd {
+        height: 43px;
+        padding-left: 35px;
+        width: 403px;
+        /*color: #333;*/
+        font-size: 14px;
+        line-height: 43px;
+        font-family: 'Microsoft YaHei';
+        background: 0 0;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        position: relative;
+        /*    left: -54px;*/
+    }
+    
+    .login_option {
+        font-size: 0;
+        height: 30px;
+        text-align: center;
+        padding-left: 57px;
+        font-family: 微软雅黑;
+    }
+    
+    .login_option .option {
+        display: inline-block;
+        font-size: 14px;
+        color: #666;
+        line-height: 20px;
+        margin-right: 16px;
+        text-decoration: none;
+        position: relative;
+        top: 14px;
+        left: 4px;
+        float: left;
+    }
+    
+    .in_line i {
+        display: block;
+        height: 30px;
+        position: absolute;
+        top: 7px;
+        background-repeat: no-repeat;
+    }
+    
+    .botbar {
+        color: #999;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    
+    .fd,
+    .fl {
+        float: left;
+        padding-left: 49px;
+    }
+    
+    .auto-login {
+        vertical-align: top;
+        margin-top: 5px;
+        margin-right: 3px;
+    }
+    
+    .botbar a {
+        color: #2980d1;
+    }
+    
+    .error {
+        float: left;
+        width: 100%;
+        color: #dd333d;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .error i {
+        background-position: -150px -140px;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        margin-right: 5px;
+        margin-top: 9pt;
+        vertical-align: top;
+    }
+    
+    .btnbar {
+        padding-top: 40px;
+    }
+    
+    .set_submit {
+        height: 47px;
+        padding-left: 39px;
+        width: 403px;
+        font-size: 14px;
+        font-family: 'Microsoft YaHei';
+        background: #3b96d5;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        position: relative;
+        left: 46px;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .fr {
+        float: right;
+        font-family: 微软雅黑;
+        position: relative;
+        left: -55px;
+    }
+    
+    .back {
+        position: relative;
+        left: 262px;
+    }
+    
+    .botbar a {
+        color: #2980d1;
+    }
+    
+    .radio {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: block;
+        /* border: 1px solid #B3B1B1; */
+        float: left;
+        position: relative;
+        top: 5px;
+        box-shadow: 0px 0px 2px #666666;
+        /* background: blue; */
+    }
+    
+    .login-bgcolor-change {
+        background: -webkit-radial-gradient(blue 0%, #3b96d5 6px, white 8px);
+        background: -moz-radial-gradient(blue 0%, #3b96d5 6px, white 8px);
+        background: -ms-radial-gradient(blue 0%, #3b96d5 6px, white 8px);
+        background: -o-radial-gradient(blue 0%, #3b96d5 6px, white 8px);
+        background: radial-gradient(blue 0%, #3b96d5 6px, white 8px);
+    }
+    
+    .in1_in2 {
+        height: 43px;
+        padding-left: 35px;
+        width: 403px;
+        color: #333;
+        font-size: 14px;
+        line-height: 43px;
+        font-family: 'Microsoft YaHei';
+        background: 0 0;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        position: relative;
+        left: -36px;
+    }
+    
+    .linea {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        min-height: 42px;
+        position: relative;
+        left: 48px;
+        width: 403px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+    }
+    
+    .rbtn {
+        left: -7px;
+    }
+    
+    .linea>input {
+        left: 2px;
+        position: absolute;
+        border: none;
+    }
+    
+    .linea>i {
+        color: #a9b1c6;
+        font-size: 20px;
+        padding: 2px 21px;
+        position: absolute;
+        top: 8px;
+        left: -13px;
+    }
+    
+    .linea>span {
+        position: relative;
+        right: 9px;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-left: 1px solid #dddddd;
+        text-shadow: 10px 0px #3b96d5;
+        color: transparent;
+        top: 10px;
+        margin-left: 294px;
+    }
+    
+    .linea>span:hover {
+        text-decoration: underline;
+    }
+    
+    .header {
+        border-bottom: none!important;
+    }
+    /*培训班模态框*/
+    
+    .trainlist {
+        font-size: 0;
+        padding: 10px 0 30px;
+    }
+    
+    .trainlist .headimg {
+        width: 90pt;
+        height: 90pt;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    
+    .trainlist li {
+        display: inline-block;
+        width: 303px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #dcdfe3;
+        color: #464852;
+        padding: 20px 0;
+        margin: 10px 5px 0;
+        text-align: center;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .trainlist .train_name {
+        font-size: 18px;
+        padding: 8px 0;
+        font-weight: 700;
+    }
+    
+    .trainlist .slogan {
+        background: #f8f0de;
+        display: inline-block;
+        padding: 2px 15px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #a38442;
+        border-radius: 24px;
+    }
+    
+    .trainlist li>p {
+        font-size: 14px;
+        line-height: 21px;
+        padding: 10px 20px;
+        text-align: justify;
+    }
+    
+    .trainlist .trainbtn {
+        background: #3b96d5;
+        display: inline-block;
+        width: auto;
+        padding: 0 25px;
+        line-height: 24px;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 2px;
+        margin: 0 5px;
+        text-decoration: none;
+    }
+    
+    .trainlist li .bm {
+        font-size: 9pt;
+        color: #999;
+        display: block;
+        line-height: 30px;
+    }
+    /*培训老是简介培训框*/
+    
+    .content_details {
+        width: 831px;
+        height: 606px;
+        position: absolute;
+        top: 31px;
+        left: -119px;
+    }
+    
+    .content_sub {
+        width: 998px;
+        height: 650px;
+        margin-left: -107px;
+    }
+    
+    .ratio-box {
+        padding: 0px;
+    }
+    /*新导航*/
+    
+    .navbar-toggle {
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .navbar{
-        /*height: 70px;*/
+    
+    .navbar {
         margin-bottom: 0px;
     }
-
+    
     .navbar-brand,
     .navbar .collapse ul li {
         display: block;
@@ -39,7 +708,7 @@
     }
     
     .navbar .navbar-right li {
-/*        width: 100px;*/
+        /*        width: 100px;*/
     }
     
     .navbar .navbar-right li a {
@@ -49,42 +718,6 @@
         text-align: center;
     }
     
-    .green {
-        display: block;
-        background-color: green;
-        height: 100px;
-    }
-    
-    .red {
-        display: block;
-        background-color: red;
-        height: 100px;
-    }
-    
-    .yellow {
-        display: block;
-        background: yellow;
-        height: 50%;
-        padding: 0px;
-    }
-    
-    .blue {
-        display: block;
-        /*        background-color: blue;*/
-        height: 100%;
-    }
-    
-    .gray {
-        display: block;
-        background: gray;
-        height: 100px;
-    }
-    
-    .black {
-        display: block;
-        height: 50%;
-    }
-    
     .navbar-header button {
         background-color: bisque;
     }
@@ -92,18 +725,37 @@
     .navbar-header span {
         color: #fff;
     }
-    
-    video {
-        width: 100%;
-        height: 100%;
-    }
-    /*    .navbar{
-        height: 70px;
-    }*/
     </style>
 </head>
 
 <body>
+    <!--     <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="btn navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">我的账户</a></li>
+                    <li><a href="#">会员权益</a></li>
+                    <li><a href="#">资料下载</a></li>
+                    <li><a href="#">关于直播</a></li>
+                    <li><a href="#">QQ客服</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">登陆</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">在线交易</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
     <nav class="navbar" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -136,35 +788,542 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-7">
-                <div class="row">
-                    <div class="col-lg-12 yellow">
-                        <video autobuffer autoloop loop controls>
-                        </video>
-                    </div>
-                    <div class="col-lg-12 black">
-                        <div class="container-fluid">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#">Home</a></li>
-                                <li role="presentation"><a href="#">Profile</a></li>
-                                <li role="presentation"><a href="#">Messages</a></li>
-                            </ul>
+                <div class="col-lg-12 cont_top">
+                    <video autobuffer autoloop loop controls>
+                        <source src="/media/video.oga">
+                        <source src="/media/video.m4v">
+                        <object type="video/ogg" data="/media/video.oga" width="320" height="240">
+                            <param name="src" value="/media/video.oga">
+                            <param name="autoplay" value="false">
+                            <param name="autoStart" value="0">
+                            <p><a href="/media/video.oga">Download this video file.</a></p>
+                        </object>
+                    </video>
+                </div>
+                <div class="col-lg-12 cont_down">
+                    <div class="container-fluid cont_nav">
+                        <ul class="nav nav-tabs" role="tablist" id="myTab" style="text-align: right;">
+                            <li role="presentation" class="active"><a href="#home">直播</a></li>
+                            <li role="presentation"><a href="#profile">教学</a></li>
+                            <li role="presentation"><a href="#messages" class="" data-toggle="modal" data-target="#myModal">订阅</a></li>
+                            <li role="presentation"><a href="#settings" class="" data-toggle="modal" data-target="#myModal2">培训班</a></li>
+                            <button type="button" class="account">立即开户</button>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <div class="nav_group">
+                                    <div class="btn-group bg-group">
+                                        <button type="button" class="btn bg-radio" style="margin-left: 20px;">直播大厅<span class="iconfont icon-huatong"></span></button>
+                                        <button type="button" class="btn bg-special" data-toggle="modal" data-target="#myModal">特别专场</button>
+                                        <button type="button" class="btn bg-class" data-toggle="modal" data-target="#myModal">陈丞的培训班</button>
+                                    </div>
+                                </div>
+                                <div class="cont_neirong">
+                                    <div class="col-lg-5 cont_left">
+                                        <div class="info"><span><i></i>行情</span></div>
+                                        <div class="list-a">
+                                            <ul>
+                                                <li>
+                                                    <div class="item">
+                                                        <span>伦敦金</span>
+                                                    </div>
+                                                    <div class="trend">
+                                                        1277.<span style="font-size: 2rem;">35</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item">
+                                                        <span style="color:#408e16;">1.38</span>
+                                                    </div>
+                                                    <div class="trend" style="padding: 5px 0px;">
+                                                        <span style="color:#408e16;">0.11%</span>
+                                                    </div>
+                                                </li>
+                                                <li class="r">
+                                                    <div class="item">
+                                                        <span>伦敦银</span>
+                                                    </div>
+                                                    <div class="trend">
+                                                        17.<span style="font-size: 2rem;">859</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item">
+                                                        <span style="color:#408e16;">1.38</span>
+                                                    </div>
+                                                    <div class="trend" style="padding: 5px 0px;">
+                                                        <span style="color:#408e16;">0.11%</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item">
+                                                        <span>美元指数</span>
+                                                    </div>
+                                                    <div class="trend">
+                                                        98.<span style="font-size: 2rem;">39</span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item">
+                                                        <span style="color:#408e16;">0.04</span>
+                                                    </div>
+                                                    <div class="trend" style="padding: 5px 0px;">
+                                                        <span style="color:#408e16;">0.04%</span>
+                                                    </div>
+                                                </li>
+                                                <li class="r">
+                                                    <div class="item">
+                                                        <span>纽约原油</span>
+                                                        <div class="trend" id="deltaPercent_CLWTI">
+                                                            48.<span style="font-size: 2rem;">49</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item">
+                                                        <span style="color:#df4d56;">-0.17</span>
+                                                    </div>
+                                                    <div class="trend" style="padding: 5px 0px;">
+                                                        <span style="color:#df4d56;">0.35%</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 cont-right" style="padding:0px;">
+                                        <div class="col-lg-6 right-r">
+                                            <div class="info">
+                                                <span><i></i>多头与空头比例</span>
+                                                <div class="fourth">
+                                                    <div class="spe"></div>
+                                                    多头
+                                                </div>
+                                                <div class="fourtha">
+                                                    <div class="spe empty"></div>
+                                                    空头
+                                                </div>
+                                            </div>
+                                            <div class="ratio">
+                                                <div class="col-lg-6 ratio-box">
+                                                    <div class="col-lg-6 data">
+                                                        <span style="font-family:微软雅黑;">多头<b>76</b>%</span>
+                                                        <br/><span class="a" style="margin-top: 2px;padding-top: 5px;border-top: 1px solid #dcdfe3;font-family:微软雅黑;">空头<b>24</b>%</span>
+                                                    </div>
+                                                    <div class="col-xs-6 circle" data-percent="60">
+                                                        <b class="circle-jin">伦敦金</b>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 ratio-box">
+                                                    <div class="col-lg-6 data">
+                                                        <span style="font-family:微软雅黑;">多头<b>76</b>%</span>
+                                                        <br/><span class="a" style="margin-top: 2px;padding-top: 5px;border-top: 1px solid #dcdfe3;font-family:微软雅黑;">空头<b>24</b>%</span>
+                                                    </div>
+                                                    <div class="col-xs-6 circle" data-percent="60">
+                                                        <b class="circle-jin">伦敦银</b>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="update">
+                                                上次更新时间：<span id="date">2016-12-11 5:24:32</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 right-l">
+                                            <div class="info">
+                                                <span><i></i>未平仓品种比率</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <div class="nav_group">
+                                    <div class="btn-group bg-group">
+                                        <button type="button" class="btn bg-radio" style="margin-left: 20px;">基础教学<span class="iconfont icon-huatong"></span></button>
+                                        <button type="button" class="btn bg-special" data-toggle="modal" data-target="#myModal">谈金论道</button>
+                                        <button type="button" class="btn bg-class" data-toggle="modal" data-target="#myModal">专家锦囊</button>
+                                    </div>
+                                    <div class="cont_neirong">
+                                        <div class="List">
+                                            <nav class="list-nav">
+                                                <ul class="pagination">
+                                                    <li><a href="#" style="color:#3a96d5;">&laquo;</a></li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li><a href="#">6</a></li>
+                                                    <li><a href="#">7</a></li>
+                                                    <li><a href="#">8</a></li>
+                                                    <li><a href="#">9</a></li>
+                                                    <li><a href="#">10</a></li>
+                                                    <li><a href="#">11</a></li>
+                                                    <li><a href="#">12</a></li>
+                                                    <li><a href="#">13</a></li>
+                                                    <li><a href="#">14</a></li>
+                                                    <li><a href="#">15</a></li>
+                                                    <li><a href="#">16</a></li>
+                                                    <li><a href="#">17</a></li>
+                                                    <li><a href="#">18</a></li>
+                                                    <li><a href="#">19</a></li>
+                                                    <li><a href="#">20</a></li>
+                                                    <li><a href="#" style="color:#3a96d5;">&raquo;</a></li>
+                                                </ul>
+                                            </nav>
+                                            <div class="course">
+                                                <div class="cpic">
+                                                    <img src="bootstrap/images/coursepic.jpg" style="padding-left: 20px;" />
+                                                </div>
+                                                <div class="intortext">
+                                                    <span style="padding-left: 5px;font-family: 微软雅黑;font-size: 18px;color: #626366;padding-left: 5px;">本集内容:</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="messages">
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="settings">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 blue">
+            <div class="col-lg-5 content_nav">
                 <div class="container-fluid">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#">Home</a></li>
-                        <li role="presentation"><a href="#">Profile</a></li>
-                        <li role="presentation"><a href="#">Messages</a></li>
+                    <ul class="nav nav-tabs" role="tablist" id="Tab" style="text-align: right;">
+                        <li role="presentation" class="active zb"><a href="#zb_cream">直播精华</a></li>
+                        <li role="presentation" class="zb"><a href="#zb_chat">聊天室</a></li>
+                        <li role="presentation" class="zb"><a href="#zb_teacher">直播老师</a></li>
+                        <li role="presentation" class="zb"><a href="#zb_shaidan">晒单墙</a></li>
                     </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="zb_cream">1</div>
+                        <div role="tabpanel" class="tab-pane" id="zb_chat">2</div>
+                        <div role="tabpanel" class="tab-pane" id="zb_teacher">3</div>
+                        <div role="tabpanel" class="tab-pane" id="zb_shaidan">4</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="bootstrap/js/jquery-3.0.0.min.js"></script>
-    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- 登录、注册模态框 -->
+    <div class="modal fade" id="myModal" style="z-index:999999;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content content">
+                <div class="modal-header header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <div class="zb-title modal-title" id="myModalLabel">
+                        <span><i class="zb-login"></i></span> 直播间登录
+                        <span><i></i></span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form style="position: relative;top: -23px;" id="login-form">
+                        <div class="formcont">
+                            <div class="in_line">
+                                <i class="iconfont1 icon-phone" style="color: #a9b1c6;font-size: 19px;padding: 2px 55px;"></i>
+                                <input type="text" name="mobilePhone" id="mobilePhone" placeholder="用户名/手机号/邮箱" class="inuser">
+                            </div>
+                            <div class="login_option">
+                                <div class="radio login-bgcolor-change" value="1"></div>
+                                <a href="#" class="option selected" lt="pwd">
+                                          客户密码
+                                      </a>
+                                <div class="radio" value="2"></div>
+                                <a href="#" class="option" lt="verify">
+                                          动态密码
+                                      </a>
+                            </div>
+                            <div class="in_line" id="line-pwd" lt="pwd" style="margin-top: 15px; display: block;">
+                                <i class="iconfont1 icon-lock" style="color: #a9b1c6;font-size: 19px;padding: 2px 55px;position: relative 
+                                      top:36px;"></i>
+                                <input type="password" name="password" id="password" placeholder="密码" class="inpwd">
+                            </div>
+                            <div class="in_line linea" id="line-code" lt="verify" style="display:none;margin-top: 15px;">
+                                <i class="iconfont1 icon-reportnumber" style="color: #a9b1c6;font-size: 20px;padding: 3px 24px; position: absolute;top: 8px;"></i>
+                                <input type="text" name="verifyCode" id="verifyCode" placeholder="动态密码" class="in1_in2">
+                                <span href="#" class="rbtn" ut="studio_login" t="120">获取动态码</span>
+                            </div>
+                            <div class="botbar" style="line-height:20px;padding-top: 10px;padding-bottom:10px;">
+                                <div class="fl">
+                                    <input type="checkbox" id="autoLogin" checked="checked" class="auto-login">
+                                    <span>下次登录</span>
+                                </div>
+                                <a href="#" class="back">找回密码？</a>
+                            </div>
+                            <div class="error dn" style="display: none;">
+                                <i></i> 手机号码不能为空！
+                            </div>
+                            <div class="btnbar">
+                                <input type="button" class="set_submit" value="登录" id="logBtnSub">
+                            </div>
+                            <div class="botbar clearfix">
+                                <span class="fr">
+                                           您还没有金道直播间账号
+                                           <a id="preRegBtn" href="javascript:void(0)">免费注册</a>
+
+                                       </span>
+                            </div>
+                        </div>
+                    </form>
+                    <form style="position: relative;top: -32px; display: none;" id="register-form">
+                        <div class="formcont">
+                            <div class="in_line">
+                                <i class="iconfont1 icon-phone" style="color: #a9b1c6;font-size: 19px;padding: 2px 49px;"></i>
+                                <input type="text" name="mobilePhone" id="mobilePhone" placeholder="用户名/手机号/邮箱" class="inuser">
+                            </div>
+                            <div class="in_line">
+                                <i class="iconfont1 icon-lock" style="color: #a9b1c6;font-size: 19px;padding: 2px 49px;position: relative 
+                                      top:36px;"></i>
+                                <input type="text" name="mobilePhone" id="mobilePhone" placeholder="设置密码" class="inuser">
+                            </div>
+                            <div class="in_line">
+                                <i class="iconfont1 icon-lock" style="color: #a9b1c6;font-size: 19px;padding: 2px 49px;position: relative 
+                                      top:36px;"></i>
+                                <input type="text" name="mobilePhone" id="mobilePhone" placeholder="再次输入密码" class="inuser">
+                            </div>
+                            <div class="in_line linea" id="line-code" lt="verify" style="margin-top: 15px;">
+                                <i class="iconfont1 icon-reportnumber" style="color: #a9b1c6;font-size: 20px;padding: 2px 21px; position: absolute;top: 8px;"></i>
+                                <input type="text" name="verifyCode" id="verifyCode" placeholder="短信验证码" class="in1_in2">
+                                <span href="#" class="rbtn" ut="studio_login" t="120">获取动态码</span>
+                            </div>
+                            <div class="error dn" style="display: none;">
+                                <i></i> 手机号码不能为空！
+                            </div>
+                            <div class="btnbar">
+                                <input type="button" class="set_submit" value="登录" id="logBtnSub">
+                            </div>
+                            <div class="botbar clearfix">
+                                <span class="fr">
+                                    已有账号，我要
+                                    <a id="loginBtn" href="javascript:void(0)">登录</a>
+
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 培训班模态框 -->
+    <div class="modal fade" id="myModal2" style="z-index:11111;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content content_sub">
+                <div class="modal-header header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <div class="zb-title modal-title" id="myModalLabel">
+                        <span><i class="zb-login"></i></span>老师培训班
+                        <span><i></i></span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="trainlist">
+                        <li>
+                            <div class="headimg"><img src="bootstrap/images/teacher1.jpg" width='120' height='120'></div>
+                            <div class="train_name">李呱呱培训班（I）</div>
+                            <div class="slogan">李呱呱</div>
+                            <p></p>
+                            <a href="javascript:void(0);" class="traindetails trainbtn" data-toggle="modal" data-target="#myModal">进入</a>
+                            <span class="bm">已报名320人</span>
+                        </li>
+                        <li>
+                            <div class="headimg"><img src="bootstrap/images/teacher3.jpg" width='120' height='120'></div>
+                            <div class="train_name">陈丞培训班</div>
+                            <div class="slogan">陈丞</div>
+                            <p></p>
+                            <a href="javascript:void(0);" class="traindetails trainbtn overbtn" data-toggle="modal" data-target="#myModal">已结束</a>
+                            <span class="bm">已报名480人</span>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <script src="bootstrap/js/jquery-3.0.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery.easypiechart.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+        $(".circle").easyPieChart({
+            animate: 2000,
+            barColor: "#CD2626", // 跑动的颜色
+            trackColor: "#71C671", // 底色
+            scaleColor: "rgba(0,0,0,0)", // 刻度线样式 这里透明
+            size: 65 // 这里调整圆的大小
+        });
+    });
+
+
+    //选项卡切换
+    $('#myTab a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    $('#Tab a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    //表单的切换
+    $("#preRegBtn").on("click", function() {
+        $("#register-form").show();
+        $("#login-form").hide();
+        $("#myModalLabel").text("直播间注册");
+    });
+
+    $("#loginBtn").on("click", function() {
+        $("#register-form").hide();
+        $("#login-form").show();
+        $("#myModalLabel").html(" <span><i class=\"zb-login\"></i></span> 直播间登录<span><i></i></span>");
+    });
+    </script>
+    <!--     <script type="text/javascript">
+    $(document).ready(function() {
+        $(".circle").easyPieChart({
+            animate: 2000,
+            barColor: "#CD2626", // 跑动的颜色
+            trackColor: "#71C671", // 底色
+            scaleColor: "rgba(0,0,0,0)", // 刻度线样式 这里透明
+            size: 80 // 这里调整圆的大小
+        });
+        // 微信的隐藏显示
+        $(".div-webchat button").mouseenter(function() {
+            $(".div-webchat button span").css("position", "relative");
+            $(".div-webchat button i").css("position", "relative");
+            $("#analystIntro").css("top","-10px");
+            $(".wx_qrcode").show();
+        });
+        $(".div-webchat button").mouseleave(function() {
+            $(".div-webchat button span").css("position", "static");
+            $(".div-webchat button i").css("position", "static");
+            $("#analystIntro").css("top","5px");
+            $(".wx_qrcode").hide();
+        });
+
+        load_time();
+        ad_turn();
+        SetScroll();
+    });
+
+    //登录框登录方式切换
+    $(".radio").on("click", function() {
+        $(".radio").removeClass("login-bgcolor-change");
+        $(this).addClass("login-bgcolor-change");
+        var res = $(this).attr("value");
+        if (res == 1) {
+            $("#line-pwd").show();
+            $("#line-code").hide();
+        } else {
+            $("#line-code").show();
+            $("#line-pwd").hide();
+        }
+    });
+
+    // 提示错误信息
+    $("#logBtnSub").on("click", function() {
+        $.ajax({
+            url: "/",
+            type: "POST",
+            success: function(data) {
+                $("錯誤提示的id").show();
+            },
+            error: function() {
+                $("錯誤提示的id").show();
+            }
+        })
+    })
+
+    //时间
+    function load_time() {
+        var time = new Date();
+        var m = time.getMonth() + 1;
+        var t = time.getFullYear() + "-" + m + "-" + time.getDate() + "" + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+        $("#date").html(t);
+
+    }
+
+    //选项卡切换
+    $('#myTab a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+    $('#Tab a').click(function(e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+
+
+    //表单的切换
+    $("#preRegBtn").on("click", function() {
+        $("#register-form").show();
+        $("#login-form").hide();
+        $("#myModalLabel").text("直播间注册");
+    });
+
+    $("#loginBtn").on("click", function() {
+        $("#register-form").hide();
+        $("#login-form").show();
+        $("#myModalLabel").html(" <span><i class=\"zb-login\"></i></span> 直播间登录<span><i></i></span>");
+    });
+    //广告滚动
+    function ad_turn() {
+        var i = 0;
+        var fangxiang = 0;
+        setInterval(function() {
+            if (fangxiang == 0) {
+                // 往左移動
+                var width = $(".ban_ul li").width() * (i + 1);
+                $(".ban_ul").animate({
+                    right: width
+                });
+                i++;
+                if (i >= 2) {
+                    fangxiang = 1;
+                }
+            } else {
+                //往右移動
+                var width = $(".ban_ul li").width() * (i);
+                $(".ban_ul").animate({
+                    right: width
+                });
+                i--;
+                if (i < 0) {
+                    fangxiang = 0;
+                }
+            }
+        }, 1000);
+    }
+    $(window).resize(function() {
+        SetScroll();
+    });
+    //内容滑动
+    function SetScroll() {
+        var windowHeight = $(window).height();
+        var navTop = $(".content-Right ul").offset().top + $(".content-Right ul").height();
+
+        $(".tab-content").height(windowHeight - navTop);
+    }
+
+    // 聊天框 图标滑动效果
+    $(".tbtn").on("mouseenter", function() {
+        $(this).children().eq(0).slideUp();
+        // console.log($(this).children().eq(1));
+    });
+    $(".tbtn").on("mouseleave", function() {
+        $(this).children().eq(0).slideDown();
+    });
+    </script> -->
 </body>
 
 </html>
