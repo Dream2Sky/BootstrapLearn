@@ -14,6 +14,7 @@
     body {
         width: 100%;
         height: 100%;
+        overflow-y: hidden;
     }
     /*中间部分*/
     
@@ -233,6 +234,7 @@
         height: 65px;
         padding: 0px;
         display: block;
+<<<<<<< HEAD
         /* position: static; */
         margin-right: 0px;
         text-align: center;
@@ -338,6 +340,10 @@
         vertical-align: top;
         background: #aec7de;
         width: 23%;
+=======
+        /*        background-color: blue;*/
+        height: 100%;
+>>>>>>> origin/master
     }
     
     .zb-title span i {
@@ -718,6 +724,27 @@
         text-align: center;
     }
     
+    .navbar-header {
+        display: block;
+        width: 170px;
+        height: 50px;
+    }
+    
+    .navbar-brand {
+        background: url("image/logo.png") no-repeat;
+        display: block;
+        width: 170px;
+        height: 38px;
+        margin: 0px !important;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    
     .navbar-header button {
         background-color: bisque;
     }
@@ -725,33 +752,74 @@
     .navbar-header span {
         color: #fff;
     }
+<<<<<<< HEAD
+=======
+    
+    video {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .nav-operator {
+        clear: both;
+    }
+    
+    .btn-operator,
+    .nav-operator {
+        height: 25px;
+        padding: 0px, auto;
+        width: 100%;
+    }
+    
+    .btn-operator li {
+        width: 33.33%;
+    }
+    @media (max-width: 768px){
+        .nav-operator li{
+            width: 33.33%;
+            text-align: center;
+        }
+    }
+    .btn-operator li,
+    .nav-operator li {
+        height: 25px;
+        float: left;
+        display: block;
+        text-align: center;
+    }
+    
+    .btn-operator li a,
+    .nav-operator li a {
+        height: 100%;
+        font-size: 14px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+>>>>>>> origin/master
     </style>
 </head>
 
 <body>
+<<<<<<< HEAD
     <!--     <nav class="navbar navbar-default" role="navigation">
+=======
+    <nav class="navbar" role="navigation">
+>>>>>>> origin/master
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="btn navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="#"></a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">我的账户</a></li>
+            <div class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav btn-operator">
+                    <li><a href="#">登陆</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">在线交易</a></li>
+                </ul>
+                <ul class="nav navbar-nav nav-operator">
                     <li><a href="#">会员权益</a></li>
                     <li><a href="#">资料下载</a></li>
                     <li><a href="#">关于直播</a></li>
                     <li><a href="#">QQ客服</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">登陆</a></li>
-                    <li><a href="#">注册</a></li>
-                    <li><a href="#">在线交易</a></li>
                 </ul>
             </div>
         </div>
