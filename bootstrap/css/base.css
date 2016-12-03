@@ -1,0 +1,129 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'STFangsong';
+    /*background-color: #ECECEC;*/
+}
+ul li
+{
+    list-style-type: none;
+}
+
+/*新导航*/
+
+.navbar-toggle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    background-color: #fff;
+}
+
+.navbar-brand,
+.navbar .collapse ul li {
+    display: block;
+    line-height: 70px;
+    text-align: center;
+    color: #000;
+}
+
+.navbar .collapse ul li a {
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 35px;
+    color: #000;
+}
+
+.navbar .navbar-right li {
+    /*        width: 100px;*/
+}
+
+.navbar .navbar-right li a {
+    height: 35px;
+    width: 100px;
+    border: 1px green solid;
+    text-align: center;
+}
+
+.navbar-header {
+    display: block;
+    /*width: 170px;*/
+    height: 70px;
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+.navbar-brand {
+    background: url("../../image/logo.png") no-repeat;
+    display: block;
+    width: 220px;
+    /*height: 38px;*/
+    margin: 0px !important;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.navbar-header button {
+    background-color: bisque;
+    width: 100%;
+    margin:0px;
+
+}
+
+.navbar-header span {
+    color: #fff;
+}
+
+.nav-operator {
+    clear: both;
+}
+
+.btn-operator,
+.nav-operator {
+    height: 25px;
+    padding: 0px, auto;
+    width: 100%;
+}
+
+.btn-operator li {
+    width: 33.33%;
+}
+
+@media (max-width: 768px) {
+    .nav-operator li {
+        width: 33.33%;
+        text-align: center;
+    }
+    .navbar-collapse {
+        width: 100%;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
+
+.btn-operator li,
+.nav-operator li {
+    height: 25px;
+    float: left;
+    display: block;
+    text-align: center;
+}
+
+.btn-operator li a,
+.nav-operator li a {
+    height: 100%;
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
